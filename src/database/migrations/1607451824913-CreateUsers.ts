@@ -1,4 +1,3 @@
-import { formatDistanceToNow } from 'date-fns';
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export default class CreateUsers1607451824913 implements MigrationInterface {
@@ -9,7 +8,7 @@ export default class CreateUsers1607451824913 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'varchar',
+            type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
